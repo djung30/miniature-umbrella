@@ -1,0 +1,88 @@
+0. The "X" of base-x represents the number of possible digits in each place value. For instance, base 3 will have possible digits 0, 1, 2. Also, the digits, starting from the end, 
+are consecutive powers of X. For instance, in base 5, starting from the last digit, the place values are 5^0, 5^1, 5^2, … 
+
+1. Binary is a base-2 number system with possible digits 0 and 1. It is important in programming because  transistors in a CPU have only two states, on and off. 
+A value in binary is a sequence of 1s and 0s, and each 1 and 0 can represent an "on" or an "off," respectively.
+
+2. Algorithm 1:(Binary to Decimal) To convert a number from binary to decimal, first count the number of digits in its binary representation (call it e). 
+Also keep track of a sum, which starts as 0. If the first digit is a 1, add 2^(e-1) to your sum; if it is 0, add nothing. For the next digit, if it is 1, 
+add 2^(e-2). Continue this until you reach the last digit, subtracting 1 from the exponent of 2 each digit. Your final sum is the base 10 representation. 
+2.1 (ex) take base-2 number 10110. The 1st, 3rd, 4th digits are 1 in the five digit number, so representation will be 2^4+2^2+2^1=22. 
+
+3. To convert a number from decimal to binary, take your number and divide it by 2. Keep track of the remainder for this division. Take the quotient from 
+this division and divide it by 2, writing the remainder to the left of the one from the previous division. Repeat this division until you get a quotient of 0, 
+and write the final remainder. The list of remainders from these repeated divisions, listed right to left, is the number's representation in binary. 3.1 (ex) 
+Take base-10 number 47. 47/2=23R1; 23/2=11R1; 11/2=5R1; 5/2=2R1; 2/2=1R0; 1/2=0R1. So, in base 2, it is 101111.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/* 
+   Given a string with the number in binary that we desire to change into decimal. First we run a for loop in which we input the digits into the array.
+   In our next for loop we create a variable which is our desired conversion. In this loop we run through the array and if the digit is a "1" we add 2 to the power
+   of the length - the position of item in the array. 
+   
+   Ex: Our array is ["1", "0", "1"], where our counter e starts at 0. The correct conversion is 5. In our algorithm, our first run would add 2 to the power
+   of 2-0(4), the second time, our array would run but input no number "0", finally we would add 2^2-2 (1), giving 5. 
+*/
+
+//import math for exponents
+import Mathpackage // <-- fix
+
+public int binaryToDecimal(int num) {
+
+  //creates a string in which we converted our num to string using toString method
+  String numstring = Integer.toString(num);
+
+  //creates an array where digits of the number as a string is inputed
+  array arrayNum[numstring.length]; //check?
+  
+  //in this loop we convert the digits in the string and append them into the array
+  for (int i; i < numstring.length; i++) {
+    //sets the each array position to be the corresponding position in the string
+    arrayNum[i] = numstring[i]; 
+  }
+  
+  //define sum as what binary is in decimal
+  int sum;
+  
+  //for loop which will calculate the sum
+  for (int e; e <= arrayNum.length; e++) {
+      sum += Math.power(2, arrayNum.lenght - e);
+  
+  }
+
+  //returns the answer
+  return sum;
+}
+
+3. Algorithm 2: Decimal To Binary
+
+/* 
+   Giving an integer, say 16, we can convert it into a binary number through a series of steps (see above)
+*/
+
+public int decimalToBinary(int numint) {
+   
+   //created variables quotient and remainder for algorithm, remainderStringBackwards is created to convert the remainder we get into actual digits
+   int quotient = numint;
+   int remainder;
+   int remainderString = "";
+   
+   //created while loop to perform calculations
+   while (quotient > 0) {
+      remainder = quotient % 2;
+      if (remainder == 1) {
+         quotient = (quotient - 1) / 2;
+         remainderString = "1" + remainderString; //courtesy of Myles 
+      } else {
+         quotient = quotient / 2;
+         remainderString = "0" + remainderString; //courtesy of Myles 
+      }
+      
+   }
+   
+   return Integer.parseInt(remainderString);
+
+}
+
+// A note: Syntax errors still here, check for other errors and other things, check if algorithm 2 works.
