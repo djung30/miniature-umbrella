@@ -10,7 +10,7 @@ public class Greet {
 }
 /* 
 	DISCOVERIES
-		You can create functions outside of the main code block and call upon them in mid
+		You can create functions outside of the main code block and call upon them in main
 		Method to allow a string input into the function that was then used as a name 
 
 	UNRESOLVED QUESTIONS
