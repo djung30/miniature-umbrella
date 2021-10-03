@@ -1,3 +1,9 @@
+/* <Daniel> <Jung>
+APCS
+HW<08> -- <Refactor Freshie Zero / Learning how to write and call functions outside of main in java>
+<2021>-<09>-<30>
+*/
+
 public class Greet {
  	public static void main (String [] args) {
 		greet("Jones");
