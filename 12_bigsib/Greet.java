@@ -15,13 +15,13 @@ public class Greet {
     System.out.println(greeting);
 
     BigSib brichard = new BigSib();
-    richard.setHelloMsg("Hey ya");
+    brichard.setHelloMsg("Hey ya");
 
     greeting = brichard.greet("Kong Fooey");
     System.out.println(greeting);
 
     BigSib qrichard = new BigSib();
-    richard.setHelloMsg("Sup");
+    qrichard.setHelloMsg("Sup");
 
     greeting = qrichard.greet("mom");
     System.out.println(greeting);
