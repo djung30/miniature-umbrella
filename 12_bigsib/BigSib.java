@@ -1,4 +1,4 @@
-/* <Dunking Ducks> (Humans: Daniel, Jason, Julia; Ducks: Ralph, Tiggy, Flopsy)
+/* Dunking Ducks (Humans: Daniel, Jason, Julia; Ducks: Ralph, Tiggy, Flopsy)
 APCS
 HW<10> -- <On Elder Individuality and the Elimination of Radio Fuzz>
 <2021>-<10>-<05>
@@ -10,7 +10,10 @@ UNRESOLVED QUESTIONS
 */
 
 public class BigSib {
-    public static String greet(String name) {
-  	    return "Good morning "+name+", it is my pleasure to see you on this scrumptious day!";
-  	}
+	public static String setHelloMsg(String phrase) {
+		String msg = phrase;
+	}
+	public static String greet(String name) {
+		return msg + " " + name; 
+	}
 }
