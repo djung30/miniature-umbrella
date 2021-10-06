@@ -1,7 +1,7 @@
 /* <Dunking Ducks> (Humans: Daniel, Jason, Julia; Ducks: Ralph, Tiggy, Flopsy)
 APCS
-HW<10> -- <Refactor Big Sib One / >
-<2021>-<10>-<4>
+HW<10> -- <On Elder Individuality and the Elimination of Radio Fuzz>
+<2021>-<10>-<05>
 DISCOVERIES
 Our goal is to make a method called greet that will intake the string and instead of printing it, 
 it will rather return it so that we can print it in the main function
