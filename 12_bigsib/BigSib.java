@@ -1,12 +1,12 @@
-/* Dunking Ducks (Humans: Daniel, Jason, Julia; Ducks: Ralph, Tiggy, Flopsy)
+/* Dynamic Duo (Humans: Daniel, Justin; Ducks: Ralph, Alfred)
 APCS
-HW<10> -- <On Elder Individuality and the Elimination of Radio Fuzz>
-<2021>-<10>-<05>
+HW 12 -- On Elder Individuality and the Elimination of Radio Fuzz
+2021 10 05
 DISCOVERIES
-Our goal is to make a method called greet that will intake the string and instead of printing it, 
-it will rather return it so that we can print it in the main function
-We use a different beginning of the method, specifiying the type of data it is outputting 
+	We can refrence methods from different files 
+	We can store information using methods from different files 
 UNRESOLVED QUESTIONS
+	What does static do/mean? 
 */
 
 public class BigSib {
