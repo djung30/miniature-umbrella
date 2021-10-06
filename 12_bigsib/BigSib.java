@@ -10,8 +10,9 @@ UNRESOLVED QUESTIONS
 */
 
 public class BigSib {
+	String msg;
 	public static String setHelloMsg(String phrase) {
-		String msg = phrase;
+		msg = phrase;
 	}
 	public static String greet(String name) {
 		return msg + " " + name; 
