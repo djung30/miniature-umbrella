@@ -11,10 +11,10 @@ UNRESOLVED QUESTIONS
 
 public class BigSib {
 	String msg;
-	public static String setHelloMsg(String phrase) {
+	public void setHelloMsg(String phrase) {
 		msg = phrase;
 	}
-	public static String greet(String name) {
+	public String greet(String name) {
 		return msg + " " + name; 
 	}
 }
