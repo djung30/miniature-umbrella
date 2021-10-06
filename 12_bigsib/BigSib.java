@@ -1,4 +1,4 @@
-/* Dynamic Duo (Humans: Daniel, Justin; Ducks: Ralph, Alfred)
+/* Tom & Jerry (Humans: Daniel, Justin; Ducks: Ralph, Alfred)
 APCS
 HW 12 -- On Elder Individuality and the Elimination of Radio Fuzz
 2021 10 05
