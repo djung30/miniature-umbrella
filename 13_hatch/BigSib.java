@@ -9,7 +9,7 @@ QCC
 */
 public class BigSib {
 	private String msg;
-	public setHelloMsg(String phrase) {
+	public BigSib(String phrase) {
 		setMsg(phrase);
 	}
 	public void setMsg(String phrase) {
