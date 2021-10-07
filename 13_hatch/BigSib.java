@@ -5,11 +5,14 @@ HW 13 -- Where do BigSibs Come From?
 DISCO
 	
 QCC
-	 
+	 Still cannot exaclty wrap my head around exact details about constructors
 */
 public class BigSib {
 	private String msg;
 	public setHelloMsg(String phrase) {
+		setMsg(phrase);
+	}
+	public void setMsg(String phrase) {
 		msg = phrase;
 	}
 	public String greet(String name) {
