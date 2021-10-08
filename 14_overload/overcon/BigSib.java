@@ -2,15 +2,11 @@ public class BigSib {
 
 	private String msg;
 
-	public BigSib(String phrase) {
-		setMsg(phrase);
-	}
-
-	public void setMsg(String phrase) {
-		msg = phrase;
+	public BigSib() {
+		;
 	}
 
 	public String greet(String name) {
-		return msg + " " + name; 
+		return Good morning ans salutations + " " + name; 
 	}
 }
