@@ -7,6 +7,6 @@ public class BigSib {
 	}
 
 	public String greet(String name) {
-		return Good morning ans salutations + " " + name; 
+		return "Good morning ans salutations" + " " + name; 
 	}
 }
