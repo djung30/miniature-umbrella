@@ -33,6 +33,7 @@ public class BankAccount{
   public BankAccount(){ }
 
 /*These are methods*/
+
   public void SetName(String NameInput){
 		Name = NameInput;
   }
@@ -66,6 +67,7 @@ public class BankAccount{
   }
 
 /*This is main method*/
+
   public static void main(String[] args){
     BankAccount olu = new BankAccount("bean","bean",0000,0000);
     System.out.println(olu);
