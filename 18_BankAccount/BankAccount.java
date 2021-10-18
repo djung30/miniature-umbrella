@@ -51,7 +51,7 @@ public class BankAccount{
   }
 
   public void PrintInfo(){
-		System.out.println("Name:"+ Name);
+    System.out.println("Name:"+ Name);
     System.out.println("Password:"+Password);
     System.out.println("Pin:"+PIN);
     System.out.println("AccountNumber:"+AccountNumber);
