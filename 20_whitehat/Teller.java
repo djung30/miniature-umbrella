@@ -17,7 +17,7 @@ public class Teller{
 	BankAccount test = new BankAccount();
 	test.setName("Tater Tots");
 	test.setPasswd("Taters123456");
-	test.setPin((short) 12345);
+	test.setPin((short) 1234);
 	test.setAcctNum(123456789);
 	test.setBalance(60000000.00);
 	test.deposit(4000.00);
