@@ -12,6 +12,8 @@ Disco:
 - Compile error when int is out of range (integer number too large)
 - When placing zeroes in front of the deposit and withdraw int values, they don't seem to work correctly 
 	- when we deposit 01000, the value should be 1000, but is instead 512
+	- when we deposit 001000, the value is still 512
+	- when we deposit 
 
 */
 
@@ -36,7 +38,7 @@ public class Teller{
 	hack.setPin((short) 1234);
 	hack.setAcctNum(000000001);
 	hack.setBalance(0);
-	hack.deposit(001000);
+	hack.deposit(001101);
 	hack.withdraw(0);
 	System.out.println(hack.toString());
 
