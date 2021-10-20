@@ -10,6 +10,9 @@ QCC:
 
 Disco:
 - Compile error when int is out of range (integer number too large)
+- When placing zeroes in front of the deposit and withdraw int values, they don't seem to work correctly 
+	- when we deposit 01000, the value should be 1000, but is instead 512
+
 */
 
 public class Teller{
@@ -31,10 +34,10 @@ public class Teller{
 	hack.setName("Tater Tots");
 	hack.setPasswd("Taters123456");
 	hack.setPin((short) 1234);
-	hack.setAcctNum(123456789);
-	hack.setBalance(1);
-	hack.deposit(01000);
-	hack.withdraw(80);
+	hack.setAcctNum(000000001);
+	hack.setBalance(0);
+	hack.deposit(001000);
+	hack.withdraw(0);
 	System.out.println(hack.toString());
 
 	// Breaking The Bank error
@@ -46,8 +49,8 @@ public class Teller{
 	hack2.setAcctNum(123456789);
 	hack2.setBalance(600000000000000000000000000000000000000000000.00);
 	hack2.deposit(400000000000000000000000000000);
-	test.withdraw(10000000000000000000000000000000);
-	System.out.println(test.toString());
+	hack2.withdraw(10000000000000000000000000000000);
+	System.out.println(hack2.toString());
 	*/
 	}
 }
