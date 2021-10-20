@@ -21,7 +21,7 @@ public class Teller{
 	test.AcctNum(123456789);
 	test.setBalance(60000000.00);
 	test.deposit(40000000.00);
-	test.withdraw(10000000000000000);
+	test.withdraw(100000000);
 	System.out.println(test.toString());
 
 	// Breaking The Bank
@@ -32,7 +32,7 @@ public class Teller{
 	test.AcctNum(123456789);
 	test.setBalance(1);
 	test.deposit(01000);
-	test.withdraw(080);
+	test.withdraw(80);
 	System.out.println(test.toString());
 	}
 	
