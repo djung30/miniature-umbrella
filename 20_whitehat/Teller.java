@@ -37,7 +37,7 @@ public class Teller{
 	hack.setName("Tater Tots");
 	hack.setPasswd("Taters123456");
 	hack.setPin((short) 1234);
-	hack.setAcctNum(000000002);
+	hack.setAcctNum(100000002);
 	hack.setBalance(0);
 	hack.deposit(001101);
 	hack.withdraw(0);
