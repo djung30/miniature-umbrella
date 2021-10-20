@@ -20,8 +20,8 @@ public class Teller{
 	test.setPin((short) 12345);
 	test.setAcctNum(123456789);
 	test.setBalance(60000000.00);
-	test.deposit(40000000.00);
-	test.withdraw(100000000);
+	test.deposit(4000.00);
+	test.withdraw(1000);
 	System.out.println(test.toString());
 /*
 	// Breaking The Bank
