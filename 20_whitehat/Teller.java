@@ -18,7 +18,7 @@ public class Teller{
 	test.setName("Tater Tots");
 	test.setPasswd("Taters123456");
 	test.setPin((short) 12345);
-	test.AcctNum(123456789);
+	test.setAcctNum(123456789);
 	test.setBalance(60000000.00);
 	test.deposit(40000000.00);
 	test.withdraw(100000000);
@@ -29,7 +29,7 @@ public class Teller{
 	hack.setName("Tater Tots");
 	hack.setPasswd("Taters123456");
 	hack.setPin((short) 12345);
-	hack.AcctNum(123456789);
+	hack.setAcctNum(123456789);
 	hack.setBalance(1);
 	hack.deposit(01000);
 	hack.withdraw(80);
@@ -42,7 +42,7 @@ public class Teller{
 	test.setName("Tater Tots");
 	test.setPasswd("Taters123456");
 	test.setPin((short) 12345);
-	test.AcctNum(123456789);
+	test.setAcctNum(123456789);
 	test.setBalance(600000000000000000000000000000000000000000000.00);
 	test.deposit(400000000000000000000000000000);
 	test.withdraw(10000000000000000000000000000000);
