@@ -7,6 +7,7 @@ public class StatsDriver{
     test.max(1,2);
     test.max(1.1,2.2);
     test.geoMean(1,2);
+    test.geoMean(1.1,1.3);
     
   }
 }
