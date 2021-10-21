@@ -37,7 +37,7 @@ public class Stats {
   }
 
   public static double geoMean(double a, double b) {
-    return Math.pow((a*b),0.5);
+    return Math.round(Math.pow((a*b),0.5));
   }
 
   public static int max(int a, int b, int c) {
