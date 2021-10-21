@@ -1,49 +1,35 @@
-public class StatsDriver {
+/* The Tator Tots (Humans: Daniel, Justin, Ari; Ducks: Ralph, Alfred, Javier)
+APCS
+HW21: Stats
+2021 10 20
+QCC:
+Disco:
+*/
+public class StatsDriver{
+  public static void main(String[] args){
+    Stats james = new Stats();
 
-    //main method for testing functionality
-    public static void main(String[] args ) {
-        System.out.println(Stats.mean(2,2));
-        System.out.println(Stats.mean(4.5,1.5));
-  
-        System.out.println("------");
-  
-        System.out.println(Stats.max(5,20));
-        System.out.println(Stats.max(5,5));
-        System.out.println(Stats.max(1.5,1.5));
-        System.out.println(Stats.max(1.5,21.5));
-  
-        System.out.println("------");
-  
-        System.out.println(Stats.max(1,2,3));
-        System.out.println(Stats.max(3,2,1));
-        System.out.println(Stats.max(1,3,2));
-        System.out.println(Stats.max(1,1,2));
-        System.out.println(Stats.max(2,2,2));
-        System.out.println(Stats.max(1,2,2));
-        
-        System.out.println(Stats.max(1.5,3.0,2.2));
-        System.out.println(Stats.max(2.0,1.0,1.0));
-        
-  
-        System.out.println("------");
-  
-        System.out.println(Stats.geoMean(10,20));
-        System.out.println(Stats.geoMean(10,10));
-        System.out.println(Stats.geoMean(0,10));
-        
-        System.out.println("------");
-  
-        System.out.println(Stats.geoMean(10.0,20.0));
-        System.out.println(Stats.geoMean(10.0,10.0));
-        System.out.println(Stats.geoMean(0.0,10.0));
-  
-        System.out.println("------");
-        
-        System.out.println(Stats.geoMean(10, 10, 10));
-  
-        System.out.println("------");
-  
-        System.out.println(Stats.geoMean(10.0, 10.0, 10.0));
-  
-      }
+    System.out.println("Mean fxns, return 4.5");
+    System.out.println(james.mean(3,6));
+    System.out.println(james.mean(3.0,6.0));
+
+    System.out.println("Max fxn, always return 6");
+    System.out.println(james.max(3,6));
+    System.out.println(james.max(6,3));
+    System.out.println(james.max(6,3,3));
+    System.out.println(james.max(3,6,3));
+    System.out.println(james.max(3,3,6));
+    System.out.println(james.max(6.0,3.0));
+    System.out.println(james.max(3.0,6.0));
+    System.out.println(james.max(6.0,3.0,3.0));
+    System.out.println(james.max(3.0,6.0,3.0));
+    System.out.println(james.max(3.0,3.0,6.0));
+
+    System.out.println("Geo mean nonsense, should return 9 then 3");
+    System.out.println(james.geoMean(3,27));
+    System.out.println(james.geoMean(3.0,27.0));
+
+    System.out.println(james.geoMean(3,3,3));
+    System.out.println(james.geoMean(3.0,3.0,3.0));
+  }
 }
