@@ -60,11 +60,11 @@ public class Stats {
 
   public static int geoMean(int a, int b, int c) {
       return (Math.pow((a * b * c), (0.333333333)));
-    }
+  }
   
   public static double geoMean(double a, double b, double c) {
       return (Math.round(Math.pow((a * b * c), (0.333333333))));
-    }
+  }
 
 
   //main method for testing functionality
