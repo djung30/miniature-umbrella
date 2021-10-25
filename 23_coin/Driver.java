@@ -17,7 +17,7 @@ public class Driver {
 
     //build Objects from blueprint specified by class Coin
 
-
+/*
     //test default constructor
 
       Coin mine = new Coin();
@@ -42,7 +42,37 @@ public class Driver {
       else {
         System.out.println( "No match. Firestarter you can not be." );
       }
-
+*/
+	Coin e = new Coin();
+	//x heads
+	int x = 21;
+	while (e.getHeadsCtr() < x) { 
+		e.flip();
+	}
+	System.out.println("Flip Counter: " + e.getFlipCtr() + "\n");
+	System.out.println("Heads Flip Counter: " + e.getHeadsCtr() + "\n");
+	System.out.println("Tails Flip Counter: " + e.getTailsCtr() + "\n\n");
+	
+	//y matches
+	e.reset("penny", 0.5);
+	int y = 21;
+	while (e.getFlipCtr() < y) {
+		e.flip();
+	}
+	System.out.println("Flip Counter: " + e.getFlipCtr() + "\n");
+	System.out.println("Heads Flip Counter: " + e.getHeadsCtr() + "\n");
+	System.out.println("Tails Flip Counter: " + e.getTailsCtr() + "\n");
+	
+	e.reset("penny", 0.5);
+	
+	while ((e.getFlipCtr() < 65536) && (e.getFlipCtr() % 2005 == 0)) {
+		e.flip();
+	}
+	System.out.println("Flip Counter: " + e.getFlipCtr() + "\n");
+	System.out.println("Heads Flip Counter: " + e.getHeadsCtr() + "\n");
+	System.out.println("Tails Flip Counter: " + e.getTailsCtr() + "\n");
+	
+	
   }//end main()
 
 }//end class
