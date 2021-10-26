@@ -1,4 +1,3 @@
-
 /***
     driver for class Coin
     ~~~ SUGGESTED WORKFLOW: ~~~
@@ -17,7 +16,7 @@ public class Driver {
 
     //build Objects from blueprint specified by class Coin
 
-/*
+
     //test default constructor
 
       Coin mine = new Coin();
@@ -42,6 +41,7 @@ public class Driver {
       else {
         System.out.println( "No match. Firestarter you can not be." );
       }
+<<<<<<< HEAD
 */
 	Coin e = new Coin();
 	//x heads
@@ -73,6 +73,9 @@ public class Driver {
 	System.out.println("Tails Flip Counter: " + e.getTailsCtr() + "\n");
 	
 	
+=======
+
+>>>>>>> b17e8e85557b1654207c662b1ac2d892e79f0e52
   }//end main()
 
 }//end class
