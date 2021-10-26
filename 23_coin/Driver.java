@@ -41,41 +41,7 @@ public class Driver {
       else {
         System.out.println( "No match. Firestarter you can not be." );
       }
-<<<<<<< HEAD
-*/
-	Coin e = new Coin();
-	//x heads
-	int x = 21;
-	while (e.getHeadsCtr() < x) { 
-		e.flip();
-	}
-	System.out.println("Flip Counter: " + e.getFlipCtr() + "\n");
-	System.out.println("Heads Flip Counter: " + e.getHeadsCtr() + "\n");
-	System.out.println("Tails Flip Counter: " + e.getTailsCtr() + "\n\n");
-	
-	//y matches
-	e.reset("penny", 0.5);
-	int y = 21;
-	while (e.getFlipCtr() < y) {
-		e.flip();
-	}
-	System.out.println("Flip Counter: " + e.getFlipCtr() + "\n");
-	System.out.println("Heads Flip Counter: " + e.getHeadsCtr() + "\n");
-	System.out.println("Tails Flip Counter: " + e.getTailsCtr() + "\n\n");
-	
-	e.reset("penny", 0.5);
-	
-	while ((e.getFlipCtr() < 65536) && ) {
-		e.flip();
-	}
-	System.out.println("Flip Counter: " + e.getFlipCtr() + "\n");
-	System.out.println("Heads Flip Counter: " + e.getHeadsCtr() + "\n");
-	System.out.println("Tails Flip Counter: " + e.getTailsCtr() + "\n");
-	
-	
-=======
 
->>>>>>> b17e8e85557b1654207c662b1ac2d892e79f0e52
   }//end main()
 
 }//end class
