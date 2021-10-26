@@ -61,11 +61,11 @@ public class Driver {
 	}
 	System.out.println("Flip Counter: " + e.getFlipCtr() + "\n");
 	System.out.println("Heads Flip Counter: " + e.getHeadsCtr() + "\n");
-	System.out.println("Tails Flip Counter: " + e.getTailsCtr() + "\n");
+	System.out.println("Tails Flip Counter: " + e.getTailsCtr() + "\n\n");
 	
 	e.reset("penny", 0.5);
 	
-	while ((e.getFlipCtr() < 65536) && (e.getFlipCtr() % 2005 == 0)) {
+	while ((e.getFlipCtr() < 65536) && ) {
 		e.flip();
 	}
 	System.out.println("Flip Counter: " + e.getFlipCtr() + "\n");
