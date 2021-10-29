@@ -5,7 +5,7 @@ HW27: FOR the Love of Strings
 QCC: What is the cleanest way that we can write this code? Is a recursive or iterative method more efficient? Are there instances where a while loop is better than using a for loop?
 Disco:
 	- String.length gives the # of characters in a string
-  - The second parameter of String.substring is exclusive
+  - The first and second parameters of String.substring are exclusive
 Time Spent: 1hr
 */
 
