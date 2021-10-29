@@ -7,7 +7,7 @@ Disco:
 */
 
 public class Rof {
-  String fence = "|";
+  static String fence = "|";
   public static String fenceF(int posts) {
     for (int i = 1; i < posts; i++) {
       fence += "--|";
