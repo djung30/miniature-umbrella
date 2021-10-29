@@ -31,7 +31,7 @@ public class Rof{
     }
     else{
       rs += s.substring(s.length()-1, s.length());
-      return reverseR(s.substring(0,s.length()-1));
+      reverseR(s.substring(0,s.length()-1));
     }
   }
                       
