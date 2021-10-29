@@ -26,7 +26,7 @@ public class Rof{
   static String rs = "";
   public static String reverseR(String s){
     String rs = "";
-    if (s.length == 0){
+    if (s.length() == 0){
       return rs;
     }
     else{
