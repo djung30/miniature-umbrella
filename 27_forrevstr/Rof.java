@@ -11,8 +11,8 @@ public class Rof {
   public static String fenceF(int posts) {
     for (int i = 1; i < posts; i++) {
       fence += "--|";
-			return fence;
 		}
+  	return fence;
   }
   
   public static void main(String[] args){
