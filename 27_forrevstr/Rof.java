@@ -23,12 +23,26 @@ public class Rof{
 		}
     return rs;
   }
+  
+  public static String reverseR(String s){
+    String rs = "";
+    int
+    if (rs.length()==s.length()){
+      return rs;
+    }
+    else{
+      rs += s.substring(s.length()-1, s.length());
+      return reverseR(s.substring(0,s.length()-1));
+    }
+  }
+                      
 
   public static void main(String[] args){
     System.out.println(fenceF(1));
     System.out.println(fenceF(2));
     System.out.println(fenceF(3));
     System.out.println(reverseF("desserts"));
+    System.out.println(reverseR("desserts"));
   }
 
 }
