@@ -6,7 +6,7 @@ QCC:
 Disco:
 */
 
-public class Rof.java{
+public class Rof {
   String fence = "|";
   public static String fenceF(int posts) {
     for (let i = 1; i < posts; i++) {
