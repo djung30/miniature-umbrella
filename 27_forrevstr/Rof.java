@@ -6,6 +6,8 @@ QCC:
 Disco:
 */
 
+public class Rof{
+
   public static String fenceF(int posts) {
     String fence = "|";
     for (int i = 1; i < posts; i++) {
@@ -24,7 +26,7 @@ Disco:
   static String rs = "";
   public static String reverseR(String s){
     String rs = "";
-    if (rs.length()==s.length()){
+    if (s.length == 0){
       return rs;
     }
     else{
