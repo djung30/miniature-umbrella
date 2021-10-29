@@ -28,6 +28,8 @@ public class Rof{
     System.out.println(fenceF(1));
     System.out.println(fenceF(2));
     System.out.println(fenceF(3));
+    System.out.println(reverseF("desserts"));
   }
 
 }
+
