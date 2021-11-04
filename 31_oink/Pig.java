@@ -87,8 +87,8 @@ public class Pig
 
   public static void main( String[] args ) 
   {
-    hasA("cat", "a")
-    hasA("cat", "p")
+    hasA("cat", "a");
+    hasA("cat", "p");
   }//end main()
 
 }//end class Pig
