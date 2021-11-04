@@ -46,6 +46,7 @@ public class Pig
     precondition: letter.length() == 1
     =====================================*/
   public static boolean isAVowel( String letter ) 
+    return true;
   {
     /* YOUR IMPLEMENTATION HERE */
   }
@@ -57,6 +58,7 @@ public class Pig
     post: countVowels("meatball") -> 3
     =====================================*/
   public static int countVowels( String w ) 
+    return 2;
   {
     /* YOUR IMPLEMENTATION HERE */
   }
@@ -69,6 +71,7 @@ public class Pig
     hasAVowel("zzz")       -> false
     =====================================*/
   public static boolean hasAVowel( String w ) 
+    return true;
   {
     /* YOUR IMPLEMENTATION HERE */
   }
@@ -80,6 +83,7 @@ public class Pig
     post: allVowels("meatball") -> "eaa"
     =====================================*/
   public static String allVowels( String w ) 
+    return "3";
   {
     /* YOUR IMPLEMENTATION HERE */
   }
