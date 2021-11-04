@@ -25,6 +25,7 @@
 public class Pig
 {
   //Q: How does this initialization make your life easier?
+  // It gives us a refrence that we can use in all of our methods
   private static final String VOWELS = "aeiou";
 
 
@@ -36,7 +37,7 @@ public class Pig
     =====================================*/
   public static boolean hasA( String w, String letter ) 
   {
-    /* YOUR IMPLEMENTATION HERE */
+    return w.contains(letter);
   }//end hasA()
 
 
@@ -86,7 +87,8 @@ public class Pig
 
   public static void main( String[] args ) 
   {
-    /* YOUR TEST CALLS HERE */
+    hasA("cat", "a")
+    hasA("cat", "p")
   }//end main()
 
 }//end class Pig
