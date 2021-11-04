@@ -60,8 +60,8 @@ public class Pig
   public static int countVowels( String w ) 
   {
     int counter=0;
-    for (i=0; i<string.length(),i++){
-      if (isAVowel((w.substring(i,i+1))){
+    for (i=0; i<string.length();i++){
+      if (isAVowel(w.substring(i,i+1))){
         counter++;
       }
     }
@@ -79,9 +79,7 @@ public class Pig
   public static boolean hasAVowel( String w ) 
   {
     return "l";
-    
   }
-
 
   /*=====================================
     String allVowels(String) -- returns vowels in a String
