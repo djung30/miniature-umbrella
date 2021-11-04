@@ -91,8 +91,8 @@ public class Pig
 
   public static void main( String[] args ) 
   {
-    System.out.print.println(hasA("cat", "a"));
-    System.out.print.println(hasA("cat", "p"));
+    System.out.println(hasA("cat", "a"));
+    System.out.println(hasA("cat", "p"));
   }//end main()
 
 }//end class Pig
