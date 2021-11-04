@@ -60,7 +60,7 @@ public class Pig
   public static int countVowels( String w ) 
   {
     int counter=0;
-    for (i=0; i<w.length();i++){
+    for (int i=0; i<w.length();i++){
       if (isAVowel(w.substring(i,i+1))){
         counter++;
       }
