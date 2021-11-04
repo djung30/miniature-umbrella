@@ -59,7 +59,13 @@ public class Pig
     =====================================*/
   public static int countVowels( String w ) 
   {
-    return 4;
+    int counter=0;
+    for (i=0; i<string.length(),i++){
+      if (isAVowel((w.substring(i,i+1))){
+        counter++;
+      }
+    }
+    return counter;
     /* YOUR IMPLEMENTATION HERE */
   }
 
@@ -72,8 +78,8 @@ public class Pig
     =====================================*/
   public static boolean hasAVowel( String w ) 
   {
-        return true;
-    /* YOUR IMPLEMENTATION HERE */
+    return "l";
+    
   }
 
 
@@ -96,6 +102,8 @@ public class Pig
     System.out.println("//"); 
     System.out.println(isAVowel("a")); //returns true
     System.out.println(isAVowel("z")); //returns false
+    System.out.println("//"); 
+    System.out.println(countVowels("meatball")); //returns 3
   }//end main()
 
 }//end class Pig
