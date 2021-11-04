@@ -78,7 +78,7 @@ public class Pig
     =====================================*/
   public static boolean hasAVowel( String w ) 
   {
-    return "l";
+    return true;
   }
 
   /*=====================================
