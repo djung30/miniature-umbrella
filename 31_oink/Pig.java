@@ -46,7 +46,8 @@ public class Pig
     precondition: letter.length() == 1
     =====================================*/
   public static boolean isAVowel( String letter ) 
-  { return true;
+  {
+    return true;
     /* YOUR IMPLEMENTATION HERE */
   }
 
@@ -90,8 +91,8 @@ public class Pig
 
   public static void main( String[] args ) 
   {
-    hasA("cat", "a");
-    hasA("cat", "p");
+    System.out.print.println(hasA("cat", "a"));
+    System.out.print.println(hasA("cat", "p"));
   }//end main()
 
 }//end class Pig
