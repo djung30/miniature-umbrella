@@ -78,7 +78,12 @@ public class Pig
     =====================================*/
   public static boolean hasAVowel( String w ) 
   {
-    return true;
+    for (int i=0; i<w.length();i++){
+      if (isAVowel(w.substring(i,i+1))){
+        return true;
+  		}
+    }
+    return false;
   }
 
   /*=====================================
@@ -88,7 +93,13 @@ public class Pig
     =====================================*/
   public static String allVowels( String w ) 
   {
-    return "3";
+    String output = "";
+    for (int i=0; i<w.length();i++){
+      if (isAVowel(w.substring(i,i+1))){
+        output = output + isAVowel(w.substring(i,i+1);
+  		}
+    }
+    return output;                        
     /* YOUR IMPLEMENTATION HERE */
   }
 
@@ -102,6 +113,11 @@ public class Pig
     System.out.println(isAVowel("z")); //returns false
     System.out.println("//"); 
     System.out.println(countVowels("meatball")); //returns 3
+    System.out.println("//"); 
+    System.out.println(hasAVowel("cat")); //returns true
+    System.out.println(hasAVowel("zzz")); //returns false
+    System.out.println("//"); 
+    System.out.println(allVowels("meatball")); //returns "eaa"
   }//end main()
 
 }//end class Pig
