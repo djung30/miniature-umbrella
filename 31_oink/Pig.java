@@ -96,7 +96,7 @@ public class Pig
     String output = "";
     for (int i=0; i<w.length();i++){
       if (isAVowel(w.substring(i,i+1))){
-        output = output + isAVowel(w.substring(i,i+1));
+        output = output + w.substring(i,i+1);
   		}
     }
     return output;                        
