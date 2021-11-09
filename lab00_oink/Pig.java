@@ -85,7 +85,7 @@ public class Pig
             isPunc("b") -> false
       =====================================*/
     public static boolean isPunc( String symbol ) {
-	return PUNCS.indexOf( symbol ) != -1;
+	    return PUNCS.indexOf( symbol ) != -1;
     }
 
 
@@ -96,7 +96,7 @@ public class Pig
             isUpperCase("A") -> true
       =====================================*/
     public static boolean isUpperCase( String letter ) {
-
+      return CAPS.indexOf( symbol ) != -1;
     }
 
 
@@ -107,7 +107,11 @@ public class Pig
             hasPunc(“cat”) -> false
       =====================================*/
     public static boolean hasPunc( String w ) {
-
+      for (int i=0; i<w.length();i++){
+        if (isPunc(w.substring(i,i+1))){
+          return true;
+  		  }
+      }
     }
 
 
@@ -118,10 +122,18 @@ public class Pig
             beginsWithUpper("apple") -> false
       =====================================*/
     public static boolean beginsWithUpper( String w ) {
-
-	return isUpperCase(w.substring(0,1) );
+      return isUpperCase(w.substring(0,1) );
     }
 
-
+  public static void main(String [] args) {
+    System.out.println(isPunc(".")) // -> true;
+    System.out.println(isPunc("b")) // -> false;
+    System.out.println(isUpperCase("a")) // -> false;
+    System.out.println(isUpperCase("A")) // -> true;
+    System.out.println(hasPunc("cat")) // -> false;
+    System.out.println(hasPunc("cat.")) // -> true;
+    System.out.println(beginsWithUpper("Apple")) // -> true;
+    System.out.println(beginsWithUpper("apple")) // -> false;
+  }
 
 }//end class Pig
