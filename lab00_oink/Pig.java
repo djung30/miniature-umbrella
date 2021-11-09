@@ -96,7 +96,7 @@ public class Pig
             isUpperCase("A") -> true
       =====================================*/
     public static boolean isUpperCase( String letter ) {
-      return CAPS.indexOf( symbol ) != -1;
+      return CAPS.indexOf( letter ) != -1;
     }
 
 
