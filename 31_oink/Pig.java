@@ -52,7 +52,6 @@ public class Pig
   public static boolean isAVowel( String letter ) 
   {
     return hasA(VOWELS, letter);
-    /* YOUR IMPLEMENTATION HERE */
   }
 
 
@@ -70,7 +69,6 @@ public class Pig
       }
     }
     return counter;
-    /* YOUR IMPLEMENTATION HERE */
   }
 
 
@@ -104,10 +102,9 @@ public class Pig
   		}
     }
     return output;                        
-    /* YOUR IMPLEMENTATION HERE */
   }
 
-
+// main for test cases
   public static void main( String[] args ) 
   {
     System.out.println(hasA("cat", "a")); //returns true
