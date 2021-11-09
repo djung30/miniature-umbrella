@@ -1,4 +1,3 @@
-
 /***
  * The Tator Tots (Humans: Daniel, Justin, Ari; Ducks: Ralph, Alfred)
  * APCS
