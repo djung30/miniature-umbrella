@@ -1,3 +1,17 @@
+
+/***
+ * The Tator Tots (Humans: Daniel, Justin, Ari; Ducks: Ralph, Alfred)
+ * APCS
+ * HW31 -- Otnay Ybay ethay Airhay Onway Ymay Inneechay Inchay Inchay
+ * 2021-11-09
+ * QCC:
+
+ * Disco: 
+
+ * PRIORITIES:
+ - 
+ ***/
+
 public class Pig
 {
 
