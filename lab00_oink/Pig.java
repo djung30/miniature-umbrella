@@ -163,8 +163,6 @@ public class Pig
 
   }//end main()
 
-}//end class Pig
-
     private static final String VOWELS = "aeiouy";
     private static final String CAPS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static final String PUNCS = ".,:;!?";
