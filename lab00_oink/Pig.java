@@ -1,6 +1,5 @@
 public class Pig
 {
-  private static final String VOWELS = "aeiou";
 
 
   /*=====================================
