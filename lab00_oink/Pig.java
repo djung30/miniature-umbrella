@@ -8,7 +8,11 @@
  * Disco: 
 
  * PRIORITIES:
- - 
+ - Regular words: pog, pizza
+ - Words with vowel as first letter: apple, attack
+ - Words that start wwith more than one consonant: string, chug
+ - Words with y: my, physics, yell
+ - Words with capital letters: Hello, They
  ***/
 
 public class Pig
