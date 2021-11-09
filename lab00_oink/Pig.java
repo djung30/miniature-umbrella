@@ -126,14 +126,14 @@ public class Pig
     }
 
   public static void main(String [] args) {
-    System.out.println(isPunc(".")) // -> true;
-    System.out.println(isPunc("b")) // -> false;
-    System.out.println(isUpperCase("a")) // -> false;
-    System.out.println(isUpperCase("A")) // -> true;
-    System.out.println(hasPunc("cat")) // -> false;
-    System.out.println(hasPunc("cat.")) // -> true;
-    System.out.println(beginsWithUpper("Apple")) // -> true;
-    System.out.println(beginsWithUpper("apple")) // -> false;
+    System.out.println(isPunc(".")); // -> true
+    System.out.println(isPunc("b")); // -> false
+    System.out.println(isUpperCase("a")); // -> false
+    System.out.println(isUpperCase("A")); // -> true
+    System.out.println(hasPunc("cat")); // -> false
+    System.out.println(hasPunc("cat.")); // -> true
+    System.out.println(beginsWithUpper("Apple")); // -> true
+    System.out.println(beginsWithUpper("apple")); // -> false
   }
 
 }//end class Pig
