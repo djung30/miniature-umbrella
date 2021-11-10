@@ -262,8 +262,6 @@ public class Pig
             System.out.print(engToPig(input) + " ");
             
         }
-        
-        
 
     }
 }//end class Pig
