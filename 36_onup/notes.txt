@@ -1,0 +1,78 @@
+/***
+ * Daniel Jung ; Ralph 
+ * APCS
+ * HW36 -- All Quacked Up!
+ * 2021-11-18
+ * time spent: 0.7hrs
+***/
+ 
+ Appendix D: Debugging
+ 
+ - Three kinds of errors: 
+  - Compile-time: incorrect syntax: ex. omitting semicolon
+  - Run-time: error while program is running: infinite recursion 
+  - Logic: program does wrong thing
+  
+ - Compile Time Errors:
+  - Don't make them in the first place! - incremental dev.
+  - LOTS of errors??? - fix them one at a time starting from the top
+  - WEIRD compiler messages?? - check given location and code for:
+    - parantheses, brackets, class defs, method defs
+    - uppercase != lowercase
+    - semicolons!
+    - "Quotation" marks
+    - good var assignments
+    - Methods: correct, ordered args, right type
+    - value vs. void methods
+    - instances: static vs. ________
+  - Program DOESNT compile NO MATTER WHAT: 
+    - check for multiple copies
+    - correct location
+    - bisection debugging - delete + check portions of code - with backups
+  - Compilier says to do...
+    - Don't always trust the compiler - it gives you errors, not always fixes to them
+  
+ - Run-Time Errors:
+  - Hanging programs:
+    - add print states before + after the loop
+    - StackOverflowError
+    - Infinite Loop:
+      - print vars + condition values at the end of the loop
+    - Infinite Recursion: (StackOverflowError)
+      - check for correct base case
+      - print params at the beginning of the method. 
+    - Flow of Excecution:
+      - print indicators at the beginning of each method
+      - check args
+ - Exceptions: 
+  - NullPointerException:
+    - tried to access object that was null - need to assign a value
+  - ArrayIndexOutofBoundsException:
+    - index is negative or greater than arrg.length-1
+    - print state index value + length of array
+    - work backwards
+  - StackOverflowError: 
+    - see "inifinite recursion"
+  - FileNotFoundException:
+    - file not found - track it down or make sure your naming is correct
+  - Arithmetic Exception: 
+    - incorrect arithmetic: ex division by 0
+ - Too many PRINT states???
+  - Remove / comment out unnecessary states / combine them
+  - good formatting 
+  - clean up / reorganize actual code as well
+
+- Logic Errors:
+  - Ask yourself:
+    - What isn't happening in the program?
+    - Is something happening that shouldn't?
+    - Unexpected results???
+  - Create mental model: OR WITH KTSes!!! - breakdown the program
+  - Common errors:
+    - int vs. double
+    - float problems
+    - = vs. == vs. .equals
+  - Rewrite + shorten complex equations + return statements (temp vars!!!)
+  - Take a break sometimes - stay sane
+  - Ask others - explain your problems clearly and make sure that code is easy to read and understand
+  - DUCKIES!!! - explain the problem and your program to your duckie to truly maximize understanding
