@@ -15,7 +15,7 @@
  * Disco:
     - The length of a 2D array is the number of rows. To get the length of row r, just do array[r].length
     - RC COLA - Rows, Columns
- 		- array.length has NO PARANTHESES
+ 	- array.length has NO PARANTHESES
  ***/
 
 public class TwoDimArray
@@ -98,7 +98,6 @@ public class TwoDimArray
 
   public static void main( String [] args )
   {
-
       int [][] m1 = new int[4][2];
       int [][] m2 = { {2,4,6}, {3,5,7} };
       int [][] m3 = { {2}, {4,6}, {1,3,5} };
