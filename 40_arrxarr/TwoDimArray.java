@@ -23,6 +23,11 @@ public class TwoDimArray
   //          uses a FOREACH loop
   public static void print2( int[][] a )
   {
+    for(int[] b : a){
+  		for(int c: b){
+  			System.out.print(c);
+  		}
+  	}
     // YOUR IMPLEMENTATION HERE
   }
 
