@@ -7,7 +7,7 @@
  * QCC:
  * Disco:
     - You can use an object of the class you're defining as a parameter in a method of that class.
-		For instance, Rational methods can take other Rationals as input.
+		- For instance, Rational methods can take other Rationals as input.
  ***/
 
 public class Rational {
