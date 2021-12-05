@@ -1,13 +1,12 @@
 /***
  * Walrus (Humans: Daniel Jung, Joshua Yagupsky, Ethan Lam; Ducks: Ralph, Quacker, Carl)
  * APCS
- * HW41 -- Be Rational
- * 2021-12-01
- * time spent: 0.4hrs
+ * HW42 -- Be More Rational
+ * 2021-12-05
+ * time spent: 0.2hrs
  * QCC:
  * Disco:
-    - You can use an object of the class you're defining as a parameter in a method of that class.
-		- For instance, Rational methods can take other Rationals as input.
+    - You don't have to reduce to add two Rationals, just find a common denominator that is guaranteed to work.
  ***/
 
 public class Rational {
@@ -49,55 +48,56 @@ public class Rational {
 		denominator *= r.numerator;
 		divZero();
 	}
-	
+
 	public int gcd() {
 		int a = this.numerator;
 		int b = this.denominator;
 		int c;
-		while (a*b != 0) {
+		while (a*b != 0) { //Are either a or b zero?
 			c = a%b;
 			a = b;
 			b = c;
 		}
-		return a+b;
+		return a+b; //Return the nonzero one
 	}
-	
+
+	public void reduce(){
+		int g = this.gcd();
+		this.numerator /= g;
+		this.denominator /= g;
+	}
+
+	public int compareTo(Rational r) {
+		if(this.floatValue() == r.floatValue()){
+			return 0;
+		}
+		else if (this.floatValue() > r.floatValue()) {
+			return 1;
+		}
+		else {
+			return -1;
+		}
+	}
+
+	public void add(Rational r) {
+		this.numerator = this.numerator*r.denominator+ this.denominator*r.numerator;
+		this.denominator = this.denominator*r.denominator;
+	}
+	public void subtract(Rational r) {
+		this.numerator = this.numerator*r.denominator - this.denominator*r.numerator;
+		this.denominator = this.denominator*r.denominator;
+	}
 	public static void main(String[] args) {
-		//Test for default constructor
-		Rational rat = new Rational();
-		System.out.println("Fraction: " + rat.toString());
-		System.out.println("Decimal: " + rat.floatValue());
-		//Test for paramaterized constructor
-		rat = new Rational(1,2);
-		System.out.println("Fraction: " + rat.toString());
-		System.out.println("Decimal: " + rat.floatValue());
-		//Test for divZero handling
-		rat = new Rational(4,0);
-		System.out.println("Fraction: " + rat.toString());
-		System.out.println("Decimal: " + rat.floatValue());
-		//Test for multiplication
-		rat = new Rational(1,2);
-		Rational mouse = new Rational(2,3);
-		System.out.println("Fraction: " + rat.toString());
-		System.out.println("Decimal: " + rat.floatValue());
-		rat.multiply(mouse);
-		System.out.println("Fraction: " + rat.toString());
-		System.out.println("Decimal: " + rat.floatValue());
-		//Test for division
-		rat = new Rational(4,1);
-		mouse = new Rational(2,3);
-		System.out.println("Fraction: " + rat.toString());
-		System.out.println("Decimal: " + rat.floatValue());
-		rat.divide(mouse);
-		System.out.println("Fraction: " + rat.toString());
-		System.out.println("Decimal: " + rat.floatValue());
-		//Test for division by zero
-		rat = new Rational(1,2);
-		mouse = new Rational(0,1);
-		System.out.println("Fraction: " + rat.toString());
-		System.out.println("Decimal: " + rat.floatValue());
-		rat.divide(mouse);
-		System.out.println("Fraction: " + rat.toString());
-		System.out.println("Decimal: " + rat.floatValue());
+		Rational r = new Rational(2,3); //Stores the rational number 2/3
+		Rational s = new Rational(1,2); //Stores the rational number 1/2
+		Rational t = new Rational(4,18); //Stores the rational number 4/18
+		r.add(s);  //Adds r to s, changes r to 7/6.  s remains 1/2
+		t.reduce(); //Changes t to 2/9
+		System.out.println(r);
+		System.out.println(s);
+		System.out.println(t);
+		System.out.println(r.compareTo(s));
+		System.out.println(r.compareTo(r));
+		System.out.println(s.compareTo(r));
 	}
 }
