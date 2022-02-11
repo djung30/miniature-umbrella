@@ -1,0 +1,17 @@
+Radical Caticals - Ziying Jian, Anjini Katari, Daniel Jung
+APCS
+HW63: Read/Review/Expand
+2022-02-11
+time spent:
+
+Activity 1:
+1)
+    a. sentimentVal( String )
+    b. This method required a String parameter. If a different parameter
+       is given, a compile time error will occur.
+    c. This method returns a double.
+
+2)
+    System.out.println(sentimentVal("backward"));
+    System.out.println(sentimentVal("terrible"));
+    System.out.println(sentimentVal("wonderful"));
