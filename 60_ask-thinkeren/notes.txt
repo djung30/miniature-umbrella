@@ -1,0 +1,18 @@
+Radical Caticals: Ziying Jian, Daniel Jung, Anjini Katari
+HW60 -- A Termite is-a Turtle, a Thinker is-a Turtle
+2022-02-07
+time spent: 0.5
+
+DISCO:
+- Minimal work as possible for each termite/turtle/thinker
+- Merge sort is a much easier sort than the others we have learned so far
+
+QCC:
+- What additional parts of the firmware are we missing that sorts the deck?
+
+THINKER FIRMWARE:
+0. Be given a deck
+1. Divide deck with >1 card into two decks
+2. Hand one deck to one empty-handed thinker, the other deck to a different empty-handed thinker 
+3. Compare each card in the deck you're given with your current deck
+4. Once you receive one card, return that card to the thinker who gave it to you.

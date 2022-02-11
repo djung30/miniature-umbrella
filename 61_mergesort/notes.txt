@@ -1,0 +1,26 @@
+Daniel Jung, Anjini Katari
+HW61 -- Instructions so Simple...
+2022-02-09
+time spent: 2.5h 
+
+DISCO:
+ * Drawing the merge tree diagram is insanely helpful!!
+ * (And a PROTIP) It's important make the distinction between 
+   merge and sort before you start coding. Otherwise, the two
+   become muddled
+
+QCC:
+ * There was a random import at the top of our file, that wasn't in the 
+   skeleton. How did it get there?! 
+   * import java.util.function.ToDoubleBiFunction;
+ * Recursion is still confusing to visualize...what is the best way to 
+   draw out recursion?
+ * Comment: print statements are lifesavers
+
+THINKER FIRMWARE:
+1. If given a deck with more than 1 card, split the deck in 2 and hand each
+   deck to a Thinker with no cards. Then wait for the Thinkeren you gave the 
+   card to, to hand them to you. Take the two piles and apply the merge sort
+   algorithm. Hand it back to the Thinker who handed you the inital deck.
+
+2. If given 1 card, hand the card back to the Thinker who gave it to you. 
