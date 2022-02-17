@@ -1,0 +1,16 @@
+Radical Caticals: Anjini Katari, Ziying Jian, Daniel Jung
+APCS
+HW65 -- NQueens
+2022-02-17
+time spent: 1.5h
+
+DISCO:
+ * Writing out code and drawing a diagram at the same time helps! 
+   It's like tracing but as you code
+ * Bad base case = cry
+ * Conversing with teams and bouncing back ideas was helpful 
+
+QCC:
+ * How do we get more than 1 solutions? 
+ * Why do we need solve and solveH? Can't we just use one of them? 
+ * If a array has 0 rows and columns, should it print out true?
