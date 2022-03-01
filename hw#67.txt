@@ -1,4 +1,4 @@
-Daniel Jung (worked with Ruby Friedman and Anjini Katari)
+Daniel Jung (worked with Ruby Friedman, Anjini Katari, and Ziying Jian)
 APCS
 HW67 -- A Knight Goes on Tour
 2022-03-01
