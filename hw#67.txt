@@ -1,0 +1,39 @@
+Daniel Jung (worked with Ruby Friedman, Anjini Katari, and Ziying Jian)
+APCS
+HW67 -- A Knight Goes on Tour
+2022-03-01
+time spent: 1.0 hrs
+
+Knight Tour Algo:
+1. Start in the corner 
+2. Move in a horizontal knight path to the next possible location 
+3. If the kight has not previously visisted this location, mark that 
+   this location has been visited. 
+4. If the knight has visited the horizontal location, return to the 
+   original space, and move in a vertical knight path
+5. If there are no possible locations to move, and all the spaces 
+   have been visited, you've completed the task! 
+6. If all paths have been traversed and you still haven't visited 
+   every square, it isn't possible for this specific board
+
+VIQs:
+1. How is Knight’s Tour similar to N-Queens?
+   Recursion is used in a similar fashion. 
+
+2. How does Knight’s Tour differ from N-Queens?
+   When doing Knight's Tour, we can utilize the concept of escape 
+   squares. Escape squares are all the sqaures can a knight on a 
+   corner square can move to.
+
+3. Which is harder?
+   Knight's Tour is harder, as it is not possible for 4x4
+   and 6x6 (to our knowledge). In Knight's Tour, you also have
+   cover each square on the board, while in N-Queens, we needed
+   to fill an N number of spaces. Finally, we tend to tackle
+   harder problems as the year progesses, and since we are covering 
+   Knight's Tour after N-Queens, it is safe to assume that it is 
+   harder. 
+
+4. Is a “Knight’s Tour” even possible?
+   Yes, a 'Knight's Tour' is possible, as was proven with a 5x5
+   square. 

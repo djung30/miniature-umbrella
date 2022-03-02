@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 import java.io.File;
 import java.util.HashMap;
@@ -194,12 +193,114 @@ public static int starRating (String fileName){
   return rating;
 }
 
+public static String fakeReview(String filename){
+  String Simple = textToString(filename);
+  String[] arr = Simple.split(" ");
+  String fin = "";
+
+  for (int i = 0; i < arr.length; i ++){
+    if (arr[i].startsWith("*")) {
+      arr[i] = randomAdjective();
+    }
+    fin += arr[i];
+    fin += " ";
+  }
+  return fin;
+}
+
+public static String extremeReview(String filename){
+  String Simple = textToString(filename);
+  String[] arr = Simple.split(" ");
+  String fin = "";
+
+  for (int i = 0; i < arr.length; i ++){
+    if (arr[i].startsWith("*")) {
+      if (sentimentVal(arr[i].substring(1)) < 0){
+        arr[i] = randomPositiveAdj();
+      }
+      else {
+        arr[i] = randomNegativeAdj();
+      }
+    }
+    fin += arr[i];
+    fin += " ";
+  }
+  return fin;
+}
+
+public static String shakespeareify(String stringeth){
+  int len = stringeth.length();
+  String shaketh = "";
+
+  if (endsIn(stringeth) == true){ //end in vowel
+    shaketh = stringeth;
+    shaketh += "th";
+  }
+  else { //end in constenant
+    shaketh = stringeth;
+    shaketh += "eth";
+  }
+  return shaketh;
+}
+
+public static boolean endsIn(String stringeth){
+  boolean positive = Math.random() < .5;
+
+  if (positive == true){
+    return true;
+  }
+  else {
+    return false;
+  }
+/*
+* note: we aren't sure why this doesn't work...
+  String lastOne = stringeth.substring(stringeth.length() - 1);
+  System.out.println(lastOne);
+  if (lastOne.equals("a")){
+    return true;
+  }
+  else if (lastOne.equals("e") ) {
+    return true;
+  }
+  else if (lastOne.equals("o") ) {
+    return true;
+  }
+  else if (lastOne.equals("i") ) {
+    return true;
+  }
+  else if (lastOne == "u" ) {
+    return true;
+  }
+  else{
+    return true;
+  }
+  */
+}
+
+/*
+hello -> helloth
+meep -> meepeth
+are -> areth
+*/
+
 public static void main(String [] args) {
+  /*
     System.out.println(sentimentVal("backward"));
     System.out.println(sentimentVal("terrible"));
     System.out.println(sentimentVal("wonderful"));
+    System.out.println("--------");
 	  System.out.println(totalSentiment("SimpleReview.txt"));
+    System.out.println("--------");
     System.out.println(starRating("SimpleReview.txt"));
+    System.out.println("--------");
+    System.out.println(fakeReview("SimpleReview.txt"));
+    System.out.println("--------");
+    System.out.println(extremeReview("SimpleReview.txt"));
+    System.out.println("--------");
+    */
+    System.out.println(shakespeareify("meep"));
+    System.out.println(shakespeareify("meepo"));
+
   }
 
 }

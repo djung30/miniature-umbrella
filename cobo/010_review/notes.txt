@@ -1,8 +1,8 @@
 Radical Caticals - Ziying Jian, Anjini Katari, Daniel Jung
 APCS
-HW63: Read/Review/Expand
-2022-02-11
-time spent:
+L06: Read/Review/Expand
+2022-02-14
+time spent: 5h
 
 Activity 1:
 1)
@@ -15,3 +15,108 @@ Activity 1:
     System.out.println(sentimentVal("backward"));
     System.out.println(sentimentVal("terrible"));
     System.out.println(sentimentVal("wonderful"));
+
+3) a. Statement would compile because the return type of the method correlates
+      with the return type of the variable.
+
+  b. Statement would not compile because the return type, double, does not
+    correlate with String, the return type of the variable.
+
+  c. Statement would not compile because there are two parameters in the method
+    call, not one. Therfore, the method wont be correctly called.
+
+Activity 2:
+1) totalSentiment takes the input of the new file, and so as long as there is
+  input, sentimentVal is run on each word. The results are stored in value, and
+  a try-catch loops ensures that FileNotFoundExceptions will be caught. The value
+  is returned at the end of the loop.
+
+2) a. Yes, the rating makes sense. For every 5 point increase, the star rating is
+  increased.
+
+  b. To adjust the totalSentiment method, we could count the number of
+    words there are and scale the required rating by the number of
+    words. That way, we can accurately adjust the starRating so that the method
+    accounts for the length of the review and scales stars accordingly. Large
+    reviews won't be given 5 stars, but will be evaluated with their size in
+    context.
+
+3)
+
+  The order of the student's code prevents a range from being specified.
+  The student incorrectly assumed that all if-statements would be checked
+    at once. Instead, because if-statements are evaluated in descending order,
+    the code will check if totalSentiment is less than 15 first. That would cause
+    ratings all less than 15 to be given a 4, even if they're less than 10, 5, or 0.
+    This prevents the later statements from evaluating anything. To fix this,
+    the student would simply flip the order of the conditions and return statements.
+
+Activity 3:
+
+3) 'indexOf()' gives you where the chosen word appreared last in a given list/array.
+   'substring()' allows you to take a specifc part of a string and cut it out, 
+   similar to splicing in Python. We need to add 1 because the '*' is not in the 
+   list of adjectives. 
+
+5) When calling non-static methods, we need to initialze them using the 'new' keyword, 
+   whereas when calling static variables, you can reference it using the 
+   .<methodName>(params).
+
+6) If we control the value corresponding to the adjective, we can ask for a positive 
+   or negative adjective by asking for a word with a value greater than or less than 0. 
+
+Activity 4:
+
+1) To bring down a buisness' revenue.
+
+2) To boost up a buisness' revenue.
+
+3) To create a stronger review, we can check if a word is farther away from 0,
+   and assign to one of the pre-existing adjectives.
+
+5) That would reassign the value of oneWord to the previous string without the 0th index.
+
+6) We need to remove the '*' because it isn't present in the list of adjectives we
+   used in the functions. 
+
+7) We find the adjective with the highest numbers and replace the current adjectives with
+   those. 
+
+Activity 5: 
+1) We chose to implement this program in order to honor the memory of William Shakespeare 
+   and continue his legacy. 
+
+2) We were inspired by certain code and then so first planned out the methods that we would 
+   need and any algorithms that we would need to implement before coding. 
+
+3) public static String shakespeareify (String stringeth) {}
+   This method takes in a String to "shakespeareify"and is used in the static contect because 
+   we don't need to make a new instance every time we want to run this function.
+
+4) stringeth.substring(stringeth.length()-1)
+   The .length method is returning the length of the String 
+   The .substring method is returning the substring of the String starting from the indicated 
+   index.
+
+5) 
+
+  if (lastOne.equals("a")){
+    return true;
+  }
+  else if (lastOne.equals("e") ) {
+    return true;
+  }
+  else if (lastOne.equals("o") ) {
+    return true;
+  }
+  else if (lastOne.equals("i") ) {
+    return true;
+  }
+  else if (lastOne == "u" ) {
+    return true;
+  }
+  else{
+    return true;
+  }
+
+It could be rewritten using a for loop and an array filled with the vowels. 
