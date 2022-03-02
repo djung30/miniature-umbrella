@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 import java.io.File;
 import java.util.HashMap;
@@ -98,20 +99,6 @@ public class Review {
     }
   }
 
-  public static double totalSentiment(String filename) {
-    double value = 0.0;
-    String temp = removePunctuation(textToString(filename));
-    int counter = 0;
-    int i = 0;
-    while (i<temp.length-1) {
-      for (int j=i; j<temp.length ; j++) {
-        if (temp[j] == SPACE) {
-
-        }
-      }
-    }
-  }
-
   /**
    * Returns the ending punctuation of a string, or the empty string if there is none
    */
@@ -176,4 +163,43 @@ public class Review {
       return randomNegativeAdj();
     }
   }
+
+public static double totalSentiment (String fileName){
+  double value = 0.0;
+  try {
+  Scanner sentimentIn = new Scanner(new File (fileName));
+  while (sentimentIn.hasNext()){
+    value += sentimentVal(removePunctuation(sentimentIn.next()));
+  } return value;
+} catch (FileNotFoundException ex) {
+  System.out.println("File not found.");
+  return value;
+}
+}
+
+public static int starRating (String fileName){
+  double sentiment = totalSentiment(fileName);
+  int rating = 0;
+  if (sentiment < 5.0){
+    rating = 1;
+  } else if (sentiment < 10.0){
+    rating = 2;
+  } else if (sentiment < 15.0){
+    rating = 3;
+  } else if (sentiment < 20.0){
+    rating = 4;
+  } else if (sentiment < 25.0){
+    rating = 5;
+  }
+  return rating;
+}
+
+public static void main(String [] args) {
+    System.out.println(sentimentVal("backward"));
+    System.out.println(sentimentVal("terrible"));
+    System.out.println(sentimentVal("wonderful"));
+	  System.out.println(totalSentiment("SimpleReview.txt"));
+    System.out.println(starRating("SimpleReview.txt"));
+  }
+
 }
