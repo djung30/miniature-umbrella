@@ -1,0 +1,4 @@
+1. There are two possible plays. the 5 of clubs and 6 of clubs and the 5 of spades and the 6 of clubs
+2. No because it would violate the invariant of having the number of face cards being divisible by 3
+3. No, it doesn't involve strategy. For example, when there is more than one choice of plays, it does not
+matter which play is executed first.
