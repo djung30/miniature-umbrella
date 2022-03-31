@@ -1,0 +1,12 @@
+A Dog's Dream (David Chen + Daniel Jung + Abdullah Faraque)
+APCS pd8
+HW85: Leon Leonwood Stack
+2022-03-30w
+time spent: 0.3 hrs
+
+DISCO: 
+- We don't need a size variable because it is already built into ArrayList
+and LinkedList
+
+QCC: 
+- Does Z refer to a generic type?
