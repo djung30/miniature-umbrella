@@ -1,0 +1,25 @@
+A Dog's Dream (David Chen + Daniel Jung + Abdullah Faruque)
+APCS pd8
+L08: America's Next Top Data Scientist
+2022-04-06r
+time spent: 2.1 hours
+
+
+DISCO
+- You can use the -classpath flag for javac to load more class files into the environment
+- You can use -d to indicate the directory in which the jar file is located
+- You had to force add sinbad.jar
+
+QCC
+- How to get sinbad to handle noncompliant values in an xml dataset
+
+
+A Dog's Dream's CSV FLOW:
+<insert your description of your tools and workflow in creating, editing CSV files>
+- Use DataSource.connect() and .load() to load an xml file from url
+- You can also use fetchFloat, fetchString, fetch, and fetchList to extract data
+
+TRUBZ
+<this lab involves using tools that are likely to introduce hiccups; log any troubleshooting issues here>
+- It was hard getting the program to compile on Windows
+- We forgot to force add sinbad.jar at first
