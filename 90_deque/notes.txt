@@ -1,0 +1,12 @@
+A Dog's Dream: Abdullah Faruque, David Chen, Daniel Jung
+APCS pd08
+HW90 - Swabbing the Deque
+2022-04-13W
+time spent: 0.5 hours
+
+DISCO -
+- For peek vs. get, ultimately, peek is more useful to us as it can also return null if the deque is empty
+- The peek() and remove() methods are not as relevant to us, as they perform the same functions as peekFirst() and removeFirst()
+QCC - 
+- What is the difference between getFirst() and pollFirst()? Both essentially do the same thing, except that pollFirst() just returns null if the deque is empty.
+- Would implementing remove(Object o) be useful? 
