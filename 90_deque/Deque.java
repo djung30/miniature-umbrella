@@ -16,15 +16,15 @@ public interface Deque<T> {
 
     public T peekFirst();
 
-    //public T peekLast();
+    public T peekLast();
 
-    //public boolean isEmpty();
+    public boolean isEmpty();
     
-    //public T remove();
+    public T remove();
 
-    //public T removeFirst();
+    public T removeFirst();
 
-    //public T removeLast();    
+    public T removeLast();    
 
-    //public int size();
+    public int size();
 }
