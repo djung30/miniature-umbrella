@@ -176,7 +176,21 @@ public class StartPanel extends JPanel
    */
   private void setupPanel()
   {
+    this.setLayout(panelLayout);
+    this.add(clueLabel);
+    this.add(celebrityRadio);
+    this.add(literatureRadio);
+    this.add(answerField);
+    this.add(clueField); 
+    this.add(startButton);
+    this.add(celebrityCountLabel);
+    this.add(addCelebrityButton);
+    
     // Adds the RadioButtons to the group so only one can be selected.
+    celebrityRadio.setSelected(true);
+    startButton.setEnabled(false);
+    typeGroup.add(celebrityRadio);
+    typeGroup.add(literatureRadio);
   }
   
   /**
