@@ -1,0 +1,13 @@
+A Dog's Dream (David Chen + Daniel Jung + Abdullah Faraque)
+APCS pd8
+L09: Some Folks Call It A Charades
+2022-04-27
+time spent: 4 hour
+
+DISCO
+GUI's are very weird.
+
+QCC
+How many celebs?
+Should we create our own classes or follow the lab?
+Are the classes outlined in the lab enough to make the game work properly?
