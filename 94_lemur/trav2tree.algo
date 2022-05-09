@@ -1,0 +1,84 @@
+A Dog's Dream: Abdullah Faruque, David Chen, Daniel Jung
+APCS pd08
+HW94: Reforestation
+2022-05-08s
+time spent: 0.5 hrs
+
+DISCO:
+-------------------------------------
+- We should partition traversals into right and left subtrees
+
+=====================================
+
+QCC:
+-------------------------------------
+- What is the most efficient algo to process trees? 
+- Is it possible to reconstruct a binary tree accurately when you have the POST and PREs only? 
+=====================================
+
+HOW KEEN ARE YOUR POWERS OF OBSERVATION?
+------------------------------------------------
+Q: For a given binary tree, how many unique pre-order traversals are there?
+A: One
+
+Q: For a given binary tree, how many unique in-order traversals are there?
+A: One
+
+Q: For a given binary tree, how many unique post-order traversals are there?
+A: One
+
+Q: For a given traversal, how many unique trees could have produced it?
+A: 2^(n-1) With the exception of the root, there are 2 unique ways to arrange each node
+
+Q: Given a pre-order traversal, what can you infer about its tree?
+A: THe first node is the roo
+
+Q: Given a post-order traversal, what can you infer about its tree?
+A: The last node is the root node
+
+Q: What does "1-to-1" mean?
+A: Elements in a set are only paired with exactly one element in another set
+
+Q: What does "onto" mean?
+A: Every element in 2 different sets are used
+
+================================================
+
+ALGO for PRE-ORDER(PRE) + POST-ORDER(POST)
+------------------------------------------------
+givens: two different traversals of the tree
+
+procedure:
+1. The first node of PRE and the last node of POST is the root node
+2. The next node in PRE is the left child and the next node in POST is the right child
+3. The two nodes after the left child in PRE are the left and right children of the left child respectively
+4. The two nodes after the right child in PRE are the left and right children of the right child respectively
+5. Repeat for unassigned values
+
+================================================
+
+ALGO for POST-ORDER(POST) + IN-ORDER(IN)
+------------------------------------------------
+givens: two different traversals of the tree
+
+procedure:
+1. The last node of the POST transversal is the root node and the indicated node
+2. The next unassigned (to the left) node of POST is the child of the indicated node
+3. If the next node is to the left of the indicated node in IN, it is the left child and vice versa
+4. The children of this next node are the right and left nodes in IN, as long as they have not already been assigned
+5. Repeat for the next unassigned node of POST
+
+================================================
+
+ALGO for PRE-ORDER(PRE) + IN-ORDER(IN)
+------------------------------------------------
+givens: two different traversals of the tree
+
+procedure: 
+1. The first node of the PRE transversal is the root node and the indicated node
+2. The next (to the right) node of PRE is the child of the indicated node
+3. If the next node is to the left of the indicated node in IN, it is the left child and vice versa
+4. The children of this next node are the right and left nodes in IN, as long as they have not already been assigned
+5. Repeat for the next unassigned node of PRE
+
+================================================
