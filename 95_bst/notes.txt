@@ -1,0 +1,15 @@
+A Dog's Dream: Abdullah Faruque, David Chen, Daniel Jung
+APCS pd08
+HW95: Algorithm as Data Structure
+2022-05-09M
+time spent: 0.5 hours
+
+DISCO:
+we could traverse the tree recursively.
+QCC:
+is there a simpler way to do this?!
+how do we determine which node to insert a node at?
+
+1. a perfect binary tree has 2^h - 1 nodes
+2. at each level, a perfect binary tree has 2^(L-1) nodes
+3. height of a complete binary tree w/ n nodes is ceiling of log base of n
