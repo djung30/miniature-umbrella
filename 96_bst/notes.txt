@@ -1,0 +1,13 @@
+A Dog's Dream: Abdullah Faruque, David Chen, Daniel Jung
+APCS pd08
+HW96 -- BSTs is the Perfect Place for Shade
+2022-05-10
+time spent: 0.5 hours
+
+DISCO: 
+ - We used recursive functions to make the processing of a tree easier
+ - Helper methods!!!
+
+QCC:
+ - What other methods can we add to BST?
+ - Can we make this run with an iterative function?
