@@ -1,0 +1,13 @@
+A Dog's Dream: Abdullah Faruque, David Chen, Daniel Jung
+APCS pd08
+HW97: Prune Your Tree
+2022-05-15s
+time spent: 0.5 hours
+
+DISCO: 
+ - We added priorities in descending order so that we can just remove
+ in order from greatest to least priority
+
+QCC:
+ - Is there a better way to do this
+ - Would we end up storing objects in arraypriorityqueues?
