@@ -1,0 +1,13 @@
+A Dog's Dream: Abdullah Faruque, David Chen, Daniel Jung
+APCS pd08
+HW101: Heap o'Trouble
+2022-05-16
+time spent: 0.5 hrs
+
+MIN HEAP INSERTION: 
+
+if heap is empty, then we set the node to the root
+
+then, insert node after highest level
+
+while the node value is less than the parent value, swap the two of them. 
