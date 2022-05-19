@@ -1,12 +1,5 @@
-//A Dog's Dream: Abdullah Faruque, David Chen, Daniel Jung
-//APCS pd08
-//HW102: Heap On Heapin' On
-//2022-05-17
-//time spent: 0.5 hours
-
 /**
  * class ALHeap
- * SKELETON
  * Implements a min heap using an ArrayList as underlying container
  */
 
@@ -27,7 +20,6 @@ public class ALHeap
   }
 
 
-
   /**
    * toString()  ---  overrides inherited method
    * Returns either
@@ -36,12 +28,23 @@ public class ALHeap
    */
   public String toString()
   {
-    String output = "[";
-    for (int i = 0; i < _heap.size(); i++) {
-      output += _heap.get(i);
+    //simple version:
+    //return _heap.toString(); 
+
+    //prettier version:
+    String lvlOrdTrav = "heap size " + _heap.size() + "\n";
+
+    if ( _heap.size() == 0 ) return lvlOrdTrav;
+
+    int h = 1; //init height to 1
+    for( int i = 0; i < _heap.size(); i++ ) {
+      lvlOrdTrav += i + ":" + _heap.get(i) + " ";
+      if ( i >= Math.pow(2,h) - 2 ) {
+        lvlOrdTrav += "\n";
+        h++;
+      }
     }
-    output += "]";
-    return output;
+    return lvlOrdTrav;
   }//O(n)
 
 
@@ -49,10 +52,7 @@ public class ALHeap
    * boolean isEmpty()
    * Returns true if no meaningful elements in heap, false otherwise
    */
-  public boolean isEmpty()
-  {
-    return _heap.isEmpty();
-  }//O(1)
+  public boolean isEmpty() { return _heap.isEmpty(); } //O(1)
 
 
   /**
@@ -62,8 +62,11 @@ public class ALHeap
    */
   public Integer peekMin()
   {
-    return _heap.get(0);
-  }//O(1)
+    if ( _heap.size() < 1 )
+      return null;
+    else
+      return _heap.get(0);
+  } //O(1)
 
 
   /**
@@ -71,18 +74,30 @@ public class ALHeap
    * Inserts an element in the heap
    * Postcondition: Tree exhibits heap property.
    * ALGO:
-   * 1. Add the value to the next level of the heap, or the end of the ArrayList
-   * 2. While the value has a parent and the parent is greater than the value, swap.
+   * <your clear && concise procedure here>
    */
   public void add( Integer addVal )
   {
-    int position = _heap.size();
-    _heap.add(addVal);
-    while (((position-1)-2) >= 0 && _heap.get((position-1)/2) > _heap.get(position)) {
-      swap(position, ((position-1)/2));
-      position  = (position-1)/2;
+
+    //Add value as last node, to maintain balance, completeness of tree
+    _heap.add( addVal );
+
+    int addValPos = _heap.size() - 1;
+    int parentPos;
+
+    while( addValPos > 0 ) { //potentially swap until reach root
+
+      //pinpoint parent
+      parentPos = (addValPos-1) / 2;
+
+      if ( addVal.compareTo(_heap.get(parentPos)) < 0 ) { //addVal < parent
+        swap( addValPos, parentPos );
+        addValPos = parentPos;
+      }
+      else
+        break;
     }
-  }//O(log(n))
+  } //O(logn)
 
 
   /**
@@ -90,27 +105,49 @@ public class ALHeap
    * Removes and returns least element in heap.
    * Postcondition: Tree maintains heap property.
    * ALGO:
-   * 1. Take the last element in the ArrayList and swap it with the root. Remove (and store) the last element.
-   * 2. Check if either of the chidlren of the current position (starts with root) are less than it, if so, swap with smallest child.
+   * <your clear && concise procedure here>
    */
   public Integer removeMin()
   {
-    if (_heap.size() == 1) {
-      return _heap.remove(0);
-    } 
-    else {
-      int pos = 0;
-      swap(0, _heap.size()-1);
-      Integer returnVal = _heap.remove(_heap.size()-1);
-      while ((2*pos+1 < _heap.size() && _heap.get(pos).compareTo(_heap.get(2*pos+1)) > 0) || (2*pos+2 < _heap.size() && _heap.get(pos).compareTo(_heap.get(2*pos+2)) > 0)) {
-        int swapPos = minChildPos(pos);
-        swap(pos, swapPos);
-        pos = swapPos;
+    if ( _heap.size() == 0 )
+      return null;
+
+    //store root value for return at end of fxn
+    Integer retVal = peekMin();
+
+    //store val about to be swapped into root
+    Integer foo = _heap.get( _heap.size() - 1);
+
+    //swap last (rightmost, deepest) leaf with root
+    swap( 0, _heap.size() - 1 );
+
+    //lop off last leaf
+    _heap.remove( _heap.size() - 1);
+
+    // walk the now-out-of-place root node down the tree...
+    int pos = 0;
+    int minChildPos;
+
+    while( pos < _heap.size() ) {
+
+      //choose child w/ min value, or check for child
+      minChildPos = minChildPos(pos);
+
+      //if no children, then i've walked far enough
+      if ( minChildPos == -1 )
+        break;
+      //if i am less than my least child, then i've walked far enough
+      else if ( foo.compareTo( _heap.get(minChildPos) ) <= 0 )
+        break;
+      //if i am > least child, swap with that child
+      else {
+        swap( pos, minChildPos );
+        pos = minChildPos;
       }
-  
-      return returnVal;
     }
-  }//O(log(n))
+    //return removed value
+    return retVal;
+  }//O(logn)
 
 
   /**
@@ -121,19 +158,22 @@ public class ALHeap
    */
   private int minChildPos( int pos )
   {
-    if (2*pos+1 > _heap.size()) {
-      return -1;
-    } else if (2*pos+2 > _heap.size()) {
-      return 2*pos+1;
-    } else {
-      if (_heap.get(2*pos+1).compareTo(_heap.get(2*pos+2)) < 0) {
-        return 2*pos+1;
-      } else {
-        return 2*pos+2;
-      }
-    }
+    int retVal;
+    int lc = 2*pos + 1; //index of left child
+    int rc = 2*pos + 2; //index of right child
 
-
+    //pos is not in the heap or pos is a leaf position
+    if ( pos < 0 || pos >= _heap.size() || lc >= _heap.size() )
+      retVal = -1;
+    //if no right child, then left child is only option for min
+    else if ( rc >= _heap.size() )
+      retVal = lc;
+    //have 2 children, so compare to find least
+    else if ( _heap.get(lc).compareTo(_heap.get(rc)) < 0 )
+      retVal = lc;
+    else
+      retVal = rc;
+    return retVal;
   }//O(1)
 
 
@@ -149,7 +189,7 @@ public class ALHeap
   //swap for an ArrayList
   private void swap( int pos1, int pos2 )
   {
-    _heap.set( pos1, _heap.set( pos2, _heap.get(pos1) ) );	
+    _heap.set( pos1, _heap.set( pos2, _heap.get(pos1) ) );
   }
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -158,7 +198,6 @@ public class ALHeap
   //main method for testing
   public static void main( String[] args )
   {
-    
       ALHeap pile = new ALHeap();
 
       pile.add(2);
@@ -204,7 +243,8 @@ public class ALHeap
       System.out.println(pile);
       System.out.println("removing " + pile.removeMin() + "...");
       System.out.println(pile);
-      
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
 
 }//end class ALHeap
